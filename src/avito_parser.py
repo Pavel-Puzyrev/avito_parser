@@ -47,3 +47,9 @@ class AvitoParser:
                 break
         return strings_in_pane
 
+    def get_stats(self, lst: list[int]) -> None:
+        print("\n",
+              "---=== СТАТИСТИКА ===---",
+              "\n")
+        sr = pd.Series(int(x) for x in lst)
+        print(sr.describe(percentiles=[.1, .25, .75, .9]).apply(lambda x: "{:,}".format(round(x, 2))))
