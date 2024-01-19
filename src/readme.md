@@ -22,6 +22,8 @@ min       12,000.0
 max       35,000.0
 ```
 
+
+
 # Project structure example
 
 +---src
@@ -29,3 +31,9 @@ max       35,000.0
 |   avito_parser.py
 
 |   rent_1fl_in_NN.html
+
+# Code example
+```
+parse_file = src.avito_parser.AvitoParser("rent_1fl_in_NN.html")
+parse_file.get_stats(parse_file.get_price_list_from_file())
+```
